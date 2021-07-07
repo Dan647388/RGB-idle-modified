@@ -107,7 +107,7 @@ function gameLoop() {
     if (SumOf(player.spectrumLevel) >= 9) document.getElementsByClassName("switch")[5].classList.remove("hidden");
     if (player.prism.active) document.getElementsByClassName("switch")[6].classList.remove("hidden");
     if (player.level.blue[3] >= 1) document.getElementById("spectrumDiv").classList.remove("hidden");
-    if (player.money.blue >= 1) document.getElementsByClassName("switch")[1].classList.remove("hidden");
+    if (player.money.blue >= 0) document.getElementsByClassName("switch")[1].classList.remove("hidden");
     if (player.specced > 0) {
         document.getElementsByClassName("switch")[1].classList.remove("hidden");
         document.getElementsByClassName("switch")[3].classList.remove("hidden");
