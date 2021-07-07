@@ -56,7 +56,7 @@ function bar(n,r,g,b,elemid) {
     this.draw = function (dif) {
         if (this.mouse == 1) {
             player.CM += 5 * (dif / 1000);
-            increase(Log.multi(Log.multi(click, 50), (dif / 1000)),dif);
+            increase(Log.multi(Log.multi(click, 0), (dif / 1000)),dif);
         } else if (this.name == "red" && player.CM > 1 && player.spectrumLevel[3] === 0) {
             player.CM -= 7.5 * (dif / 1000);
             player.CM = Math.max(player.CM, 1);
@@ -108,7 +108,7 @@ function gameLoop() {
     if (player.prism.active) document.getElementsByClassName("switch")[6].classList.remove("hidden");
     if (player.level.blue[3] >= 1) document.getElementById("spectrumDiv").classList.remove("hidden");
     if (player.money.blue >= 0) document.getElementsByClassName("switch")[1].classList.remove("hidden");
-    if (player.specced > 0) {
+    if (player.specced > 99999) {
         document.getElementsByClassName("switch")[1].classList.remove("hidden");
         document.getElementsByClassName("switch")[3].classList.remove("hidden");
         document.getElementById("tabSpectrum").childNodes[1].classList.add("hidden");
